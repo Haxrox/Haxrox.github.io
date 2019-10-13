@@ -50,11 +50,9 @@
         position: absolute;
       }
     </style>
-{% seo %}
   </head>
-
+  <!-- BODY -->
   <body>
-
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="mdc-top-app-bar">
@@ -63,27 +61,6 @@
                   {{ site.title | default: site.github.repository_name }}
                 </span>
           </section>
-          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" >
-              <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                  <span class="mdc-tab__content">
-                    <span class="mdc-tab__icon material-icons" aria-hidden="true">info</span>
-                    <span class="mdc-tab__text-label">Information</span>
-                  </span>
-                  <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                  </span>
-                  <span class="mdc-tab__ripple"></span>
-                </button>
-          </section>
-          
-          <!-- <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2> -->
-
-          <!-- {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %} -->
         </header>
     </div>
     
@@ -104,7 +81,6 @@
                 </section>
           </div>
     </div>
-
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
@@ -126,13 +102,4 @@
       </script>
     {% endif %}
   </body>
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="/__/firebase/7.2.0/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
-
-  <!-- Initialize Firebase -->
-  <script src="/__/firebase/init.js"></script>
 </html>
