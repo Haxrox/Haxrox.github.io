@@ -22,6 +22,7 @@
       header.mdc-tab-bar {
         background-color: #3185d8;
         color: #ffffff;
+        width: 25%;
         align-content: flex-end;
       }
       body { 
@@ -55,12 +56,20 @@
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
-          {% if site.github.is_project_page %}
-            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
-          {% endif %}
-
-          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
+        <header class="mdc-top-app-bar">
+          <span class="mdc-top-app-bar__title">
+            {{ site.title | default: site.github.repository_name }}
+          </span>
+          <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__icon material-icons" aria-hidden="true">info</span>
+                <span class="mdc-tab__text-label">Information</span>
+              </span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
           <!-- <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2> -->
 
           <!-- {% if site.show_downloads %}
@@ -72,16 +81,7 @@
         </header>
         <!-- Tab Bar-->
     <div class="mdc-tab-bar" role="tablist">
-        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-            <span class="mdc-tab__content">
-              <span class="mdc-tab__icon material-icons" aria-hidden="true">info</span>
-              <span class="mdc-tab__text-label">Information</span>
-            </span>
-            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-            </span>
-            <span class="mdc-tab__ripple"></span>
-          </button>
+        
     </div>
     </div>
     
