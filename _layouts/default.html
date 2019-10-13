@@ -11,15 +11,13 @@
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
     <style>
-      /* header {
+      header {
         background-color: #3185d8;
         padding: 1pc;
         position: sticky;
-        text-align: left;
+        color: #ffffff;
+        text-align: center;
         font-size: 30;
-      } */
-      #IntroCard {
-        background-image: "/assets/Toad.jpg";
       }
       body { 
         background: #ECEFF1; 
@@ -45,52 +43,60 @@
         position: absolute;
       }
     </style>
+{% seo %}
   </head>
-  <!-- BODY -->
+
   <body>
+
     <!-- HEADER -->
-    <header class="mdc-top-app-bar">
-        <div class="mdc-top-app-bar__row">
-          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
-            <span class="mdc-top-app-bar__title">Title</span>
-          </section>
-          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-              <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Download">file_download</button>
-              <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Print this page">print</button>
-              <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Bookmark this page">bookmark</button>
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          {% if site.github.is_project_page %}
+            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
+          {% endif %}
+
+          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
+          <!-- <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2> -->
+
+          <!-- {% if site.show_downloads %}
+            <section id="downloads">
+              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
             </section>
-        </div>
-      </header>
+          {% endif %} -->
+        </header>
+    </div>
+
+    <div class="mdc-tab-bar" role="tablist">
+        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
+              <span class="mdc-tab__text-label">Favorites</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple"></span>
+          </button>
+    </div>
     
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
             <div class="mdc-layout-grid__cell">
-              <div id="main_content" class="mdc-card mdc-card--outlined">
-                  <div class="mdc-card__primary-action">
-                    <header>
-                      Introduction
-                    </header>
-                      <div id = "IntroCard" class="mdc-card__media mdc-card__media--square">
-                      </div>
-                    </div>
-              </div>
-              <div id="main_content" class="mdc-card mdc-card--outlined">
-                  {{ content }}
-                </div>
-            </div>
-            <div class="mdc-layout-grid__cell">
-                <div id="main_content" class="mdc-card mdc-card--outlined">
-                  {{ content }}
-                </div>
-          </div>
-          <div class="mdc-layout-grid__cell">
-              <div id="main_content" class="mdc-card mdc-card--outlined">
+              <section id="main_content" class="mdc-card">
                 {{ content }}
-              </div>
-        </div>
+              </section>
+              <section id="main_content" class="mdc-card">
+                {{ content }}
+              </section>
+              <section id="main_content" class="mdc-card">
+                {{ content }}
+              </section>
+            </div>
+          </div>
     </div>
+
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
@@ -112,4 +118,13 @@
       </script>
     {% endif %}
   </body>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.2.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
 </html>
