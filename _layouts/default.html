@@ -16,12 +16,13 @@
         padding: 1pc;
         position: sticky;
         color: #ffffff;
-        text-align: center;
+        text-align: left;
         font-size: 30;
       }
-      .mdc-tab-bar {
+      header.mdc-tab-bar {
         background-color: #3185d8;
         color: #ffffff;
+        align-content: flex-end;
       }
       body { 
         background: #ECEFF1; 
@@ -69,9 +70,7 @@
             </section>
           {% endif %} -->
         </header>
-    </div>
-    
-    <!-- Tab Bar-->
+        <!-- Tab Bar-->
     <div class="mdc-tab-bar" role="tablist">
         <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
             <span class="mdc-tab__content">
@@ -84,6 +83,9 @@
             <span class="mdc-tab__ripple"></span>
           </button>
     </div>
+    </div>
+    
+    
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="mdc-layout-grid">
