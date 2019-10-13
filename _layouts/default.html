@@ -54,15 +54,14 @@
   <!-- BODY -->
   <body>
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="mdc-top-app-bar">
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
           <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-              <span class="mdc-top-app-bar__title">
-                  {{ site.title | default: site.github.repository_name }}
-                </span>
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+            <span class="mdc-top-app-bar__title">Title</span>
           </section>
-        </header>
-    </div>
+        </div>
+      </header>
     
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="mdc-layout-grid">
