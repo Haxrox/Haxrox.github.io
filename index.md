@@ -1,4 +1,6 @@
-# __Introduction__
+![Toad](/assets/Toad.png)
+
+# Introduction
 
 Hello World! I'm Haxrox and I'm creating this website to learn how to create websites!
 
