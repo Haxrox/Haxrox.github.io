@@ -11,15 +11,15 @@
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
     <style>
-      header {
+      /* header {
         background-color: #3185d8;
         padding: 1pc;
         position: sticky;
         text-align: left;
         font-size: 30;
-      }
+      } */
       #IntroCard {
-        background-image: url(/assets/Toad.jpg);
+        background-image: "/assets/Toad.jpg";
       }
       body { 
         background: #ECEFF1; 
@@ -69,8 +69,10 @@
             <div class="mdc-layout-grid__cell">
               <div id="main_content" class="mdc-card mdc-card--outlined">
                   <div class="mdc-card__primary-action">
+                    <header>
+                      Introduction
+                    </header>
                       <div id = "IntroCard" class="mdc-card__media mdc-card__media--square">
-                        <div class="mdc-card__media-content">Introduction</div>
                       </div>
                     </div>
               </div>
