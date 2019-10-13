@@ -68,10 +68,14 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="mdc-card">
-        {{ content }}
-      </section>
+    <div id="main_content_wrap" class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell">
+              <section id="main_content" class="mdc-card">
+                {{ content }}
+              </section>
+            </div>
+          </div>
     </div>
 
     <!-- FOOTER  -->
