@@ -1,4 +1,4 @@
-![Toad](/assets/Toad.png)
+![Toad](/assets/Toad.jpg)
 
 # Introduction
 
