@@ -18,6 +18,9 @@
         text-align: left;
         font-size: 30;
       }
+      #IntroCard {
+        background-image: url(/assets/Toad.jpg);
+      }
       body { 
         background: #ECEFF1; 
         color: rgba(0,0,0,0.87); 
@@ -65,7 +68,11 @@
         <div class="mdc-layout-grid__inner">
             <div class="mdc-layout-grid__cell">
               <div id="main_content" class="mdc-card mdc-card--outlined">
-                {{ content }}
+                  <div class="mdc-card__primary-action">
+                      <div id = "IntroCard" class="mdc-card__media mdc-card__media--square">
+                        <div class="mdc-card__media-content">Introduction</div>
+                      </div>
+                    </div>
               </div>
               <div id="main_content" class="mdc-card mdc-card--outlined">
                   {{ content }}
