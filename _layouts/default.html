@@ -19,11 +19,12 @@
         text-align: left;
         font-size: 30;
       }
-      header.mdc-tab-bar {
-        background-color: #3185d8;
+      header.title {
         color: #ffffff;
+      }
+      header.buttons {
         width: 25%;
-        align-content: flex-end;
+        align-content: flex-start;
       }
       body { 
         background: #ECEFF1; 
@@ -57,19 +58,24 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="mdc-top-app-bar">
-          <span class="mdc-top-app-bar__title">
-            {{ site.title | default: site.github.repository_name }}
-          </span>
-          <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-              <span class="mdc-tab__content">
-                <span class="mdc-tab__icon material-icons" aria-hidden="true">info</span>
-                <span class="mdc-tab__text-label">Information</span>
-              </span>
-              <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-              </span>
-              <span class="mdc-tab__ripple"></span>
-            </button>
+          <section id = "title">
+              <span class="mdc-top-app-bar__title">
+                  {{ site.title | default: site.github.repository_name }}
+                </span>
+          </section>
+          <section id = "buttons" >
+              <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                  <span class="mdc-tab__content">
+                    <span class="mdc-tab__icon material-icons" aria-hidden="true">info</span>
+                    <span class="mdc-tab__text-label">Information</span>
+                  </span>
+                  <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+          </section>
+          
           <!-- <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2> -->
 
           <!-- {% if site.show_downloads %}
@@ -88,6 +94,9 @@
               <section id="main_content" class="mdc-card">
                 {{ content }}
               </section>
+              <section id="main_content" class="mdc-card">
+                  {{ content }}
+                </section>
             </div>
             <div class="mdc-layout-grid__cell">
                 <section id="main_content" class="mdc-card">
